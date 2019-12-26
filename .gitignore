@@ -1,4 +1,5 @@
 OLD_*
 .env
 site/
+!site/helloworld.php
 mysql/
