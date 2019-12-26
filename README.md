@@ -1,7 +1,7 @@
 # IUB_Dockerized
 The needed files to create a suitable Docker for the IUB project. Using this file a fully working Docker can be built in few moments.
 
-# lsyncd
+## lsyncd
 To replicate the files inside the `/site` directory we use the software lsyncd. Inside the directory you can find an example of setup.
 
 Place the file `lsyncd.conf.lua` in the following path if you use **systemd**: `/etc/lsyncd`
