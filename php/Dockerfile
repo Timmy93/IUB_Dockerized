@@ -2,7 +2,7 @@ FROM php:7.3.13-apache
 
 #Install missing components
 RUN apt-get update && apt-get install -y \
-	libcurl3-dev 
+	 libcurl3-dev 
 RUN docker-php-ext-install mysqli 
 RUN docker-php-ext-install curl 
 RUN docker-php-ext-install pdo_mysql
