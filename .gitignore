@@ -1,4 +1,4 @@
-OLD_*
+OLD/
 .env
 site/*
 !site/helloworld.php
