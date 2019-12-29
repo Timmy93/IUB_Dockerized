@@ -20,6 +20,9 @@ services:
       MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
     ports:
       - ${MYSQL_PORT}:3306
+    volumes:
+  #    - ./db/sql_files:/docker-entrypoint-initdb.d
+      - ./db/mysql:/var/lib/mysql
 
   web:
     image: php:7.3.13-apache

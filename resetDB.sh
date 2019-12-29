@@ -9,6 +9,11 @@
 #Remove DB created placeholder
 echo "Removing placeholder"
 sudo rm -f site/Private/DB_created
+
 #Remove DB
-echo "Deleting DB"
-mysql -uroot -p -h127.0.0.1 -P33060 -e "DROP SCHEMA my_IUB;"
+#~ echo "Deleting DB"
+#~ mysql -uroot -p -h127.0.0.1 -P33060 -e "DROP SCHEMA my_IUB;"
+
+#Remove the entire DB
+echo "Removing the entire DB"
+sudo rm -rf db/mysql/*
