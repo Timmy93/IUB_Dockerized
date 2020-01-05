@@ -21,7 +21,6 @@ services:
     ports:
       - ${MYSQL_PORT}:3306
     volumes:
-  #    - ./db/sql_files:/docker-entrypoint-initdb.d
       - ./db/mysql:/var/lib/mysql
 
   web:
@@ -36,4 +35,4 @@ services:
     volumes:
       - ./site:/var/www/html
     ports:
-      - ${HTTP_PORT}:80  # expose container's port 80 on host's port 8080, the web service
+      - ${HTTP_PORT}:80
