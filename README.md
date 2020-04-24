@@ -6,6 +6,9 @@ The needed files to create a suitable Docker for the IUB project. Using this fil
  - Fill missing parameters to file `.env`
  - Run: `docker-compose up -d`
 
+## How to stop this docker
+ - Run: `docker-compose stop`
+
 ## lsyncd
 To replicate the files inside the `/site` directory we use the software lsyncd. Inside the directory you can find an example of setup.
 
