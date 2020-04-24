@@ -1,6 +1,11 @@
 # IUB_Dockerized
 The needed files to create a suitable Docker for the IUB project. Using this file a fully working Docker can be built in few moments.
 
+## How to run this docker
+ - Rename file `.env.demo` to `.env`
+ - Fill missing parameters to file `.env`
+ - Run: `docker-compose up -d`
+
 ## lsyncd
 To replicate the files inside the `/site` directory we use the software lsyncd. Inside the directory you can find an example of setup.
 
