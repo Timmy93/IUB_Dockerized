@@ -3,3 +3,5 @@ OLD/
 site/*
 !site/helloworld.php
 mysql/
+*.RCJ
+site/helloworld.php
