@@ -24,7 +24,7 @@ services:
       - ./db/mysql:/var/lib/mysql
 
   web:
-    image: php:7.3.13-apache
+    image: php:7.3-apache
     build: ./php
     container_name: IUB_php
     restart: unless-stopped

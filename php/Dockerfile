@@ -1,4 +1,4 @@
-FROM php:7.3.13-apache
+FROM php:7.3-apache
 
 #Install missing components
 RUN apt-get update && apt-get install -y \

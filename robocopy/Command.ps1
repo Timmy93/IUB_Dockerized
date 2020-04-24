@@ -1,12 +1,17 @@
 #To use on Windows machines
 $source = $home+"\Documents\Development\IUB\site"
 $dest = $home+"\Documents\Development\IUB_Dockerized\site"
+$seconds = 3
 
+do {
+	$res = robocopy $source $dest /MIR /XD Private /NFL /NDL /NJH /NJS
+	if ($res -eq 1) {
+		echo "Files updated";
+	}
+	sleep($seconds)
+	
 
-robocopy $source $dest `
-	/MIR `
-	/XD Private `
-	/save:sync_website
+} while ($true)
 	
 #Use the following to test without applying modifies
 #robocopy $source $dest `
