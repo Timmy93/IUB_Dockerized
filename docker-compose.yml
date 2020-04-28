@@ -11,7 +11,7 @@ services:
         MYSQL_DATABASE: "${MYSQL_DATABASE}"
         MYSQL_USER: "${MYSQL_USER}"
         MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
-    container_name: IUB_sql
+    container_name: "${MYSQL_CONTAINER}"
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
@@ -26,8 +26,24 @@ services:
   web:
     image: php:7.3-apache
     build: ./php
-    container_name: IUB_php
+    container_name: "${HTTP_CONTAINER}"
     restart: unless-stopped
+    environment:
+      db_host: "${MYSQL_CONTAINER}"
+      db_username: "${MYSQL_USER}"
+      db_password: "${MYSQL_PASSWORD}"
+      db_db_name: "${IUB_DB_NAME}"
+      db_db_port: 3306
+      db_encryption_key: "${IUB_ENCRYPTION_KEY}"
+      http_personalServer_host: "${IUB_REPOSITORY_HOST}"
+      http_personalServer_username: "${IUB_REPOSITORY_USERNAME}"
+      http_personalServer_password: "${IUB_REPOSITORY_PASSWORD}"
+      http_version: "${IUB_SOFTWARE_VERSION}"
+      http_production: "${IUB_PRODUCTION}"
+      http_proxy_ip: "${IUB_PROXY_IP}"
+      http_proxy_port: "${IUB_PROXY_PORT}"
+      
+      
     depends_on:
       - db
     links:
