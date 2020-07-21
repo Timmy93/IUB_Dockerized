@@ -44,6 +44,8 @@ services:
       http_production: "${IUB_PRODUCTION}"
       http_proxy_ip: "${IUB_PROXY_IP}"
       http_proxy_port: "${IUB_PROXY_PORT}"
+      imgur_client_id: "${IUB_IMGUR_ID}"
+      imgur_client_secret: "${IUB_IMGUR_SECRET}"
     dns:
       - 1.1.1.1
       - 1.0.0.1
