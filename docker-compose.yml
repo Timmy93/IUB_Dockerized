@@ -40,6 +40,7 @@ services:
       personalServer_host: "${IUB_REPOSITORY_HOST}"
       personalServer_username: "${IUB_REPOSITORY_USERNAME}"
       personalServer_password: "${IUB_REPOSITORY_PASSWORD}"
+      personalServer_secret_key: "${IUB_REPOSITORY_SECRET_KEY}"
       http_version: "${IUB_SOFTWARE_VERSION}"
       http_production: "${IUB_PRODUCTION}"
       http_proxy_ip: "${IUB_PROXY_IP}"
