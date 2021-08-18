@@ -2,7 +2,7 @@
 $source = $home+"\Documents\Development\IUB\site"
 $dest = $home+"\Documents\Development\IUB_Dockerized\site"
 $seconds = 3
-
+echo "Sync in progress";
 do {
 	$res = robocopy $source $dest /MIR /XD Private /NFL /NDL /NJH /NJS
 	if ($res -eq 1) {
