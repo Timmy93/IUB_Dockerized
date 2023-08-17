@@ -1,8 +1,10 @@
 #To use on Windows machines
-$source = $home+"\Documents\Development\IUB\site"
-$dest = $home+"\Documents\Development\IUB_Dockerized\site"
+$source = $home+"\Development\IUB\site"
+$dest = $home+"\Development\IUB_Dockerized\site"
 $seconds = 3
 echo "Sync in progress";
+echo "From: "$source;
+echo "To: "$dest;
 do {
 	$res = robocopy $source $dest /MIR /XD Private /NFL /NDL /NJH /NJS
 	if ($res -eq 1) {
