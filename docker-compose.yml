@@ -3,7 +3,7 @@ version: '3.1'
 services:
 
   db:
-    image: mariadb:10.4.12
+    #image: mariadb:10.4.12
     build: 
       context: ./db
       args:
@@ -25,8 +25,11 @@ services:
       - ./db/mysql:/var/lib/mysql
 
   web:
-    image: php:7.3-apache
-    build: ./php
+    #image: php:8.2-apache
+    build: 
+      context: ./php
+      args:
+        TZ: Europe/Rome
     container_name: "${HTTP_CONTAINER}"
     restart: unless-stopped
     environment:

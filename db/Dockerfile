@@ -1,4 +1,4 @@
-FROM mariadb:latest
+FROM mariadb:10.11
 ARG MYSQL_ROOT_PASSWORD
 ARG MYSQL_USER
 ARG SETUP_SQL=IUB_setup.sql

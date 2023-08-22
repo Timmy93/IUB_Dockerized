@@ -1,4 +1,4 @@
-CREATE DATABASE test_env;
+-- CREATE DATABASE test_env;
 --GRANT Alter ON *.* TO '§MYSQL_USER§'@'%';
 --GRANT Create ON *.* TO '§MYSQL_USER§'@'%';
 --GRANT Create view ON *.* TO '§MYSQL_USER§'@'%';
